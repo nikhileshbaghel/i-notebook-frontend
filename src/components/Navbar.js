@@ -33,23 +33,21 @@ const Navbar = () => {
    
         return(
           
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <Link className="navbar-brand" to="/">iNoteBook</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarCollapse">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-      <li className="nav-item">
-          <Link className= {`nav-link ${(location.pathname==='/home')?"active":""}`} aria-current="page" to="/home">Home</Link>
-        </li>
-        {/*<li className="nav-item">
-          <Link className={`nav-link ${(location.pathname==='/about')?"active":""}`} aria-current="page" to="/about">About</Link>
-        </li>*/}
-        
-      </ul>
-      {localStorage.getItem('token') ?<>
+              
+         <div className="m-4">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+            <button type="button" className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+                <div className="navbar-nav">
+                      <Link className= {`nav-link ${(location.pathname==='/')?"active":""}`} to="/"><i>iNoteBook</i></Link>
+                    <Link className= {`nav-link ${(location.pathname==='/home')?"active":""}`} aria-current="page" to="/home">Home</Link>
+                   
+                </div>
+                <div className="navbar-nav ms-auto">
+                     {localStorage.getItem('token') ?<>
       <form className="d-flex"> 
                <Link  className="btn btn-primary mx-2" to="/logout" role="button" onClick={logOut}>LogOut</Link>
       </form>
@@ -57,9 +55,11 @@ const Navbar = () => {
              {(location.pathname!=='/login') ? <Link  className="btn btn-primary mx-2" to="/login" role="button">Login</Link> : <></>}
                <Link className="btn btn-primary mx-2" to="/signup" role="button">Signup</Link>
       </form> }
-    </div>
-  </div>
-</nav>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
           
         )
     
