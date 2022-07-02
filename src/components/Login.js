@@ -66,7 +66,7 @@ const Login = (props) => {
                     <label className="form-label" htmlFor="form2Example22">Password</label>
                   </div>
 
-                  <button type="submit" className="text-center pt-1 mb-5 pb-1 btn btn-primary">Login</button>
+                  <button type="submit" className="text-center pt-1 mb-5 pb-1 btn btn-primary">Login.</button>
 
                 </form>
 
