@@ -8,7 +8,7 @@ const Login = (props) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("//http://54.199.33.25/api/auth/login", {  //http://54.199.33.25/  <--  https://inotebook-backend-17.herokuapp.com
+        const response = await fetch("//http://54.199.33.25/auth/login", {  //http://54.199.33.25/  <--  https://inotebook-backend-17.herokuapp.com
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
