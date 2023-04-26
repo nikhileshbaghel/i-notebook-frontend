@@ -11,7 +11,7 @@ const Signup = (props) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const {name, email, password, cpassword} = credentials;
-        const response = await fetch("https://3.112.37.186/api/auth/createuser", {         ////     http://54.199.33.25/     
+        const response = await fetch("http://13.113.192.171/api/auth/createuser", {         ////     http://54.199.33.25/     
             method: 'POST',                                                                                       //   "https://inotebook-backend-17.herokuapp.com/api/auth/createuser"
             headers: {
                 'Content-Type': 'application/json'
