@@ -2,7 +2,7 @@ import NoteContext from "./NoteContext";
 import { useState } from "react";
 
 const NoteState = (props) => {
-      const host = "https://inotebook-backend-17.herokuapp.com"
+      const host = "http://13.113.192.171"           // backend url changed from "https://inotebook-backend-17.herokuapp.com" to http://13.113.192.171/
       const notesInitial = [];
       const [notes, setNotes] = useState(notesInitial);
      
