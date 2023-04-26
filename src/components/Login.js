@@ -13,7 +13,7 @@ const Login = (props) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            referrerPolicy: "unsafe_url", // added for run http as well
+            //referrerPolicy: "unsafe_url", // added for run http as well
             body: JSON.stringify({email: credentials.email, password: credentials.password})
         });
         const json = await response.json()
