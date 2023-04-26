@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const UserWithLogin=()=> {
     const Userinfo = async () => {
-        const response = await fetch("https://3.112.37.186/api/auth/getuser", {   //backend url changed  // from https://inotebook-backend-17.herokuapp.com/ to 
+        const response = await fetch("http://13.113.192.171/api/auth/getuser", {   //backend url changed  // from https://inotebook-backend-17.herokuapp.com/ to 
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
